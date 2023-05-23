@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">hopitaux</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_sign_up_short">Sign up</string>
+    <string name="password">Password</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="i_am_a">I am a</string>
+    <string name="donor">Donor</string>
+    <string name="hospital">Hospital</string>
+    <!--  Donor quiz  -->
+    <string name="yesButton">Yes</string>
+    <string name="noButton">No</string>
+    <string name="donorFailedText">I\'m sorry but you are not eligible to be a donor. Please come back in 4 months, I dunno</string>
+</resources>
