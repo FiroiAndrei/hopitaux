@@ -25,6 +25,12 @@
             android:exported="false"
             android:label="@string/title_activity_home" />
         <activity
+            android:name=".HospitalMainMenu"
+            android:exported="false" />
+        <activity
+            android:name=".PublishDonationRequest"
+            android:exported="false" />
+        <activity
             android:name=".DonorForm"
             android:exported="false" />
         <activity

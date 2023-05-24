@@ -14,11 +14,17 @@ public class DonorQuizActivity extends AppCompatActivity {
     private Button noButton;
     private TextView question;
     private String questions[]={
-            "Are you 18-75 years old?",
-            "Had a tattoo in the last 4 months?",
-            "Are you pregnant or recently given birth?"};
+            "Est-ce que vous avez un age de 18 a 70 ans?",
+            "Votre dernier don date de moins de 8 semaines?",
+            "Avez-vous ete teste positif pour le VIH?",
+            "Avez-vous eu un cancer au cours de votre vie?",
+            "Etes-vous traite pour une maladie chronique telle que diabete?",
+            "Avez-vous fait un tatouage dans les 4 derniers mois?"};
     private String correctAnsweres[] = {  // 1 == "yes" , 0 == "no"
             "1",
+            "0",
+            "0",
+            "0",
             "0",
             "0"};
     private int index = 0;
