@@ -36,14 +36,6 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
 
-        iAmAHospitalButton = findViewById(R.id.iAmAHospital);
-        iAmAHospitalButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openHospitalActivity();
-            }
-        });
-
         iAmAnAdminButton = findViewById(R.id.iAmAnAdmin);
         iAmAnAdminButton.setOnClickListener(new View.OnClickListener() {
             @Override

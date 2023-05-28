@@ -14,7 +14,7 @@
     <string name="i_am_a">I am a</string>
     <string name="donor">Donor</string>
     <string name="hospital">Hospital</string>
-    <!--  Donor quiz  -->
+    <!--  com.example.hopitaux.Donor.Donor quiz  -->
     <string name="yesButton">Yes</string>
     <string name="noButton">No</string>
     <string name="donorFailedText">I\'m sorry but you are not eligible to be a donor. Please come back in 4 months, I dunno</string>
@@ -128,4 +128,5 @@
     </string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main_menu_donor">MainMenuDonor</string>
 </resources>

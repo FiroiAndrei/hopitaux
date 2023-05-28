@@ -12,24 +12,37 @@
         android:theme="@style/Theme.Hopitaux"
         tools:targetApi="31">
         <activity
-            android:name=".SettingsActivity"
+            android:name=".ViewConfirmationRequests"
             android:exported="false" />
         <activity
-            android:name=".DashboardActivity"
+            android:name=".AddAppointmentIntervals"
             android:exported="false" />
         <activity
-            android:name=".HomeMainActivity"
+            android:name=".ProgramMeetup"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
-            android:exported="false"
-            android:label="@string/title_activity_home" />
-        <activity
-            android:name=".HospitalMainMenu"
+            android:name=".Recommendations"
             android:exported="false" />
         <activity
-            android:name=".PublishDonationRequest"
+            android:name=".AddAnnouncement"
             android:exported="false" />
+        <activity
+            android:name=".AccountInformation"
+            android:exported="false" />
+        <activity
+            android:name=".MainMenuHospital"
+            android:exported="false" />
+        <activity
+            android:name=".MainMenuDonor"
+            android:exported="false" />
+        <activity
+            android:name=".AccountDetails"
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".HospitalMainMenu" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name=".PublishDonationRequest" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".DonorForm"
             android:exported="false" />
