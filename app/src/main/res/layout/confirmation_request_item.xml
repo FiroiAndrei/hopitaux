@@ -36,7 +36,8 @@
         android:id="@+id/confirmationRequestCandidateName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
         android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/confirmationRequestHour"
@@ -46,7 +47,8 @@
         android:id="@+id/confirmationRequestCandidateBloodType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="8dp"
         android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/confirmationRequestHour"
@@ -56,7 +58,8 @@
         android:id="@+id/confirmationRequestCandidateAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="172dp"
+        android:layout_marginStart="264dp"
+        android:layout_marginTop="8dp"
         android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/confirmationRequestHour"
@@ -66,11 +69,43 @@
         android:id="@+id/confirmButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="44dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="4dp"
         android:clickable="true"
         android:src="@drawable/baseline_done_24"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="Nom:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmationRequestDay" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="Sang:"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/confirmationRequestCandidateName"
+        app:layout_constraintTop_toBottomOf="@+id/confirmationRequestHour" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="38dp"
+        android:text="Age:"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/confirmationRequestCandidateBloodType"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

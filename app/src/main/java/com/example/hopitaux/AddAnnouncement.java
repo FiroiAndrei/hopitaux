@@ -74,11 +74,15 @@ public class AddAnnouncement extends AppCompatActivity {
                 EditText descriptionInput = findViewById(R.id.addDescription);
                 String description = descriptionInput.getText().toString();
 
+                EditText cityInput = findViewById(R.id.addCity);
+                String city = cityInput.getText().toString();
+
                 Map<String, String> map = new HashMap<>();
                 map.put("title", title);
                 map.put("bloodType", bloodType);
                 map.put("reason", reason);
                 map.put("description", description);
+                map.put("city", city);
                 map.put("hospital", hospital);
                 map.put("hospitalEmail", email);
                 database.collection("announcements").add(map)
