@@ -27,6 +27,7 @@ public class MainMenuDonor extends AppCompatActivity {
     private FirebaseFirestore database;
     private FloatingActionButton accountButton;
     private FloatingActionButton recommendationsButton;
+    private FloatingActionButton showPastDonationsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +72,14 @@ public class MainMenuDonor extends AppCompatActivity {
                 openRecommendationsActivity();
             }
         });
+
+        showPastDonationsButton = findViewById(R.id.showPastDonationsButton);
+        showPastDonationsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openShowPastDonationsActivity();
+            }
+        });
     }
 
     private void openAccountActivity() {
@@ -80,6 +89,11 @@ public class MainMenuDonor extends AppCompatActivity {
 
     private void openRecommendationsActivity() {
         Intent intent = new Intent(this, Recommendations.class);
+        startActivity(intent);
+    }
+
+    private void openShowPastDonationsActivity() {
+        Intent intent = new Intent(this, ShowPastDonations.class);
         startActivity(intent);
     }
 }

@@ -48,6 +48,7 @@ public class ConfirmationRequestAdapter extends RecyclerView.Adapter<Confirmatio
         String candidateEmail = confirmationRequests.get(position).getCandidate();
         String day = confirmationRequests.get(position).getDay();
         String hour = confirmationRequests.get(position).getHour();
+        String confirmed = confirmationRequests.get(position).getConfirmed();
         // go through all of the confirmationRequests and filter out the ones that are already confirmed
         for (ConfirmationRequest request: confirmationRequests) {
             if (request.getConfirmed().equals("true")) {
@@ -57,6 +58,11 @@ public class ConfirmationRequestAdapter extends RecyclerView.Adapter<Confirmatio
         // search database for this candidate to show all different info about them
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseFirestore.getInstance();
+
+        if (candidateEmail.equals(mAuth.getCurrentUser().getEmail())) {
+            // this means we are logged in as a donor, hide the confirm button
+            holder.confirmButton.setVisibility(View.INVISIBLE);
+        }
 
         database.collection("donators").whereEqualTo("email", candidateEmail).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
@@ -71,6 +77,11 @@ public class ConfirmationRequestAdapter extends RecyclerView.Adapter<Confirmatio
                         holder.candidateBloodType.setText(candidateBloodType);
                         holder.day.setText(day);
                         holder.hour.setText(hour);
+                        if (confirmed == "true") {
+                            holder.confirmed.setText("Confirmed!");
+                        } else {
+                            holder.confirmed.setText("Not confirmed");
+                        }
                     } else {
                         Log.e("Error", "no such donor in db");
                     }
@@ -79,6 +90,8 @@ public class ConfirmationRequestAdapter extends RecyclerView.Adapter<Confirmatio
                 }
             }
         });
+
+
 
         holder.confirmButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -145,6 +158,8 @@ public class ConfirmationRequestAdapter extends RecyclerView.Adapter<Confirmatio
         private TextView day;
         private TextView hour;
 
+        private TextView confirmed;
+
         private FloatingActionButton confirmButton;
 
         public ConfirmationRequestViewHolder(@NonNull View itemView) {
@@ -154,6 +169,7 @@ public class ConfirmationRequestAdapter extends RecyclerView.Adapter<Confirmatio
             candidateAge = itemView.findViewById(R.id.confirmationRequestCandidateAge);
             day = itemView.findViewById(R.id.confirmationRequestDay);
             hour = itemView.findViewById(R.id.confirmationRequestHour);
+            confirmed = itemView.findViewById(R.id.confirmed);
             confirmButton = itemView.findViewById(R.id.confirmButton);
         }
     }
